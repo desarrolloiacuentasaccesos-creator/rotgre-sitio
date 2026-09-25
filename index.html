@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ROTGRE · Refaccionaria, autopartes y equipo industrial en Oaxaca</title>
+<meta name="description" content="Refaccionaria Autopartes y Equipo Industrial ROTGRE, S.A. de C.V. Refacciones automotrices y equipo industrial en Oaxaca de Juárez desde 2016. Tienda en línea próximamente.">
+<meta name="theme-color" content="#0F172A">
+<link rel="canonical" href="https://rotgre.com.mx/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="ROTGRE · Refaccionaria, autopartes y equipo industrial">
+<meta property="og:description" content="Refacciones automotrices y equipo industrial en Oaxaca de Juárez desde 2016.">
+<meta property="og:url" content="https://rotgre.com.mx/">
+<meta property="og:locale" content="es_MX">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230F172A'/%3E%3Ctext x='32' y='44' font-family='Rubik,sans-serif' font-size='34' font-weight='700' fill='%23fff' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
+
+<style>
+  /* Tokens del sistema de diseño del proyecto — design-system/rotgre-marketplace/MASTER.md */
+  :root{
+    --primary:#0F172A; --on-primary:#FFFFFF; --secondary:#334155;
+    --accent:#0369A1; --accent-hover:#075985;
+    --background:#F8FAFC; --foreground:#020617;
+    --muted:#E8ECF1; --muted-foreground:#475569; --border:#E2E8F0;
+    --radius:.75rem;
+    --font-heading:'Rubik',ui-sans-serif,system-ui,sans-serif;
+    --font-sans:'Nunito Sans',ui-sans-serif,system-ui,sans-serif;
+    --ancho:68rem;
+  }
+  /* Modo oscuro: se respeta la preferencia del sistema, y se puede forzar con data-theme. */
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --background:#0B1220; --foreground:#E6EDF6;
+      --muted:#16202F; --muted-foreground:#94A3B8; --border:#1E2A3C;
+      --primary:#E6EDF6; --on-primary:#0B1220;
+      --accent:#38BDF8; --accent-hover:#7DD3FC;
+    }
+  }
+  :root[data-theme="dark"]{
+    --background:#0B1220; --foreground:#E6EDF6;
+    --muted:#16202F; --muted-foreground:#94A3B8; --border:#1E2A3C;
+    --primary:#E6EDF6; --on-primary:#0B1220;
+    --accent:#38BDF8; --accent-hover:#7DD3FC;
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--background); color:var(--foreground);
+    font-family:var(--font-sans); font-size:1.0625rem; line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:var(--font-heading); line-height:1.15; margin:0; letter-spacing:-.015em}
+  a{color:inherit}
+  .env{width:100%; max-width:var(--ancho); margin-inline:auto; padding-inline:16px}
+
+  /* ---------------------------------------------------------- encabezado */
+  header{
+    background:#0F172A; color:#fff;
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .barra{display:flex; align-items:center; gap:.75rem; min-height:72px}
+  .marca{display:flex; align-items:center; gap:.7rem; text-decoration:none}
+  .sello{
+    width:40px; height:40px; border-radius:10px; flex:0 0 auto;
+    background:#0369A1; color:#fff; display:grid; place-items:center;
+    font-family:var(--font-heading); font-weight:700; font-size:1.25rem;
+  }
+  .marca b{font-family:var(--font-heading); font-size:1.2rem; letter-spacing:.02em}
+  .marca span{display:block; font-size:.75rem; color:#94A3B8; font-weight:400; letter-spacing:.06em; text-transform:uppercase}
+
+  /* ---------------------------------------------------------- portada */
+  .portada{background:#0F172A; color:#fff; padding:clamp(3rem,8vw,5.5rem) 0 clamp(3.5rem,9vw,6rem)}
+  .desde{
+    display:inline-block; font-size:.8rem; letter-spacing:.1em; text-transform:uppercase;
+    color:#7DD3FC; border:1px solid rgba(125,211,252,.35); border-radius:999px;
+    padding:.3rem .8rem; margin-bottom:1.5rem;
+  }
+  .portada h1{font-size:clamp(2rem,5.5vw,3.25rem); font-weight:600; max-width:22ch}
+  .portada p{color:#CBD5E1; font-size:clamp(1.05rem,2.2vw,1.2rem); max-width:56ch; margin:1.25rem 0 0}
+
+  .acciones{display:flex; flex-wrap:wrap; gap:.75rem; margin-top:2rem}
+  .boton{
+    display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
+    min-height:48px; padding:0 1.35rem; border-radius:var(--radius);
+    font-family:var(--font-sans); font-weight:600; font-size:1rem;
+    text-decoration:none; border:1px solid transparent; cursor:pointer;
+    transition:background-color .18s ease, border-color .18s ease;
+  }
+  .boton-principal{background:#0369A1; color:#fff}
+  .boton-principal:hover{background:#075985}
+  .boton-secundario{background:transparent; color:#fff; border-color:rgba(255,255,255,.28)}
+  .boton-secundario:hover{background:rgba(255,255,255,.08)}
+  .boton:focus-visible{outline:3px solid #7DD3FC; outline-offset:2px}
+
+  /* ---------------------------------------------------------- qué hacemos */
+  .seccion{padding:clamp(3rem,7vw,4.5rem) 0}
+  .seccion h2{font-size:clamp(1.5rem,3.5vw,2rem); font-weight:600}
+  .entrada{color:var(--muted-foreground); max-width:60ch; margin:.85rem 0 0}
+
+  .rejilla{display:grid; gap:1rem; margin-top:2rem; grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr))}
+  .ficha{
+    background:var(--muted); border:1px solid var(--border);
+    border-radius:var(--radius); padding:1.5rem;
+  }
+  .ficha h3{font-size:1.1rem; font-weight:600; margin-bottom:.5rem}
+  .ficha p{margin:0; color:var(--muted-foreground); font-size:.975rem}
+
+  /* ---------------------------------------------------------- aviso de la tienda */
+  .aviso{
+    border:1px solid var(--border); border-left:4px solid var(--accent);
+    background:var(--muted); border-radius:var(--radius);
+    padding:1.5rem; margin-top:2.5rem;
+  }
+  .aviso h3{font-size:1.05rem; font-weight:600; margin-bottom:.4rem}
+  .aviso p{margin:0; color:var(--muted-foreground); font-size:.975rem}
+
+  /* ---------------------------------------------------------- contacto */
+  .contacto{background:var(--muted); border-top:1px solid var(--border)}
+  .datos{display:grid; gap:1.75rem; grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr)); margin-top:1.75rem}
+  .dato h3{font-size:.8rem; letter-spacing:.09em; text-transform:uppercase; color:var(--muted-foreground); font-weight:600; margin-bottom:.5rem}
+  .dato p{margin:0; font-size:1.05rem}
+  .dato a{color:var(--accent); text-decoration:none; font-weight:600}
+  .dato a:hover{text-decoration:underline}
+  .dato address{font-style:normal; color:var(--foreground); line-height:1.55}
+
+  /* ---------------------------------------------------------- pie */
+  footer{background:#0F172A; color:#94A3B8; padding:2.25rem 0; font-size:.875rem}
+  footer p{margin:0 0 .4rem}
+  footer b{color:#E2E8F0; font-weight:600}
+
+  @media (prefers-reduced-motion: reduce){
+    *{transition-duration:.01ms !important; animation-duration:.01ms !important}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="env barra">
+    <a class="marca" href="/">
+      <span class="sello" aria-hidden="true">R</span>
+      <span>
+        <b>ROTGRE</b>
+        <span>Refaccionaria · Oaxaca</span>
+      </span>
+    </a>
+  </div>
+</header>
+
+<main>
+  <section class="portada">
+    <div class="env">
+      <span class="desde">Desde 2016 en Oaxaca</span>
+      <h1>Refacciones automotrices, autopartes y equipo industrial</h1>
+      <p>
+        Atendemos a talleres, flotillas y particulares en Oaxaca de Juárez. Si busca una pieza
+        por número de parte o no sabe cuál necesita, escríbanos: se la identificamos.
+      </p>
+      <div class="acciones">
+        <a class="boton boton-principal" href="https://wa.me/529515774060">Escribir por WhatsApp</a>
+        <a class="boton boton-secundario" href="tel:+529515774060">Llamar al 951 577 4060</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion">
+    <div class="env">
+      <h2>Qué encuentra con nosotros</h2>
+      <p class="entrada">
+        Trabajamos con refacciones para automóvil y con equipo industrial. Lo que no está en
+        existencia se consigue sobre pedido.
+      </p>
+
+      <div class="rejilla">
+        <article class="ficha">
+          <h3>Refacciones automotrices</h3>
+          <p>Motor, frenos, suspensión, eléctrico y carrocería, con compatibilidad por marca, modelo y año.</p>
+        </article>
+        <article class="ficha">
+          <h3>Autopartes por número de parte</h3>
+          <p>Si trae el número de la pieza, se localiza directo. Si no lo tiene, lo buscamos con los datos del vehículo.</p>
+        </article>
+        <article class="ficha">
+          <h3>Equipo industrial</h3>
+          <p>Componentes y consumibles para taller y planta, con atención a empresas y facturación.</p>
+        </article>
+      </div>
+
+      <div class="aviso">
+        <h3>Nuestra tienda en línea está en camino</h3>
+        <p>
+          Estamos preparando el catálogo completo con búsqueda por número de parte y por vehículo,
+          existencias en tiempo real y compra con factura. Mientras tanto, atendemos por WhatsApp
+          y por teléfono con el mismo servicio de siempre.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion contacto">
+    <div class="env">
+      <h2>Dónde estamos</h2>
+
+      <div class="datos">
+        <div class="dato">
+          <h3>Teléfono y WhatsApp</h3>
+          <p><a href="tel:+529515774060">951 577 4060</a></p>
+        </div>
+
+        <div class="dato">
+          <h3>Sucursal matriz</h3>
+          <address>
+            Calzada Niños Héroes de Chapultepec 1220<br>
+            Int. 109G, nivel 1B · Barrio de Jalatlaco<br>
+            68080 Oaxaca de Juárez, Oaxaca
+          </address>
+          <p style="margin-top:.6rem">
+            <a href="https://www.google.com/maps/search/?api=1&query=Calzada+Ni%C3%B1os+H%C3%A9roes+de+Chapultepec+1220%2C+Jalatlaco%2C+68080+Oaxaca+de+Ju%C3%A1rez">Ver en el mapa</a>
+          </p>
+        </div>
+
+        <div class="dato">
+          <h3>Entre calles</h3>
+          <p>Aldama y Triunfo de la República</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="env">
+    <p><b>Refaccionaria Autopartes y Equipo Industrial ROTGRE, S.A. de C.V.</b></p>
+    <p>R.F.C. RAE160606S80 · Oaxaca de Juárez, Oaxaca, México</p>
+    <p style="margin-top:1rem">&copy; <span id="anio">2026</span> ROTGRE. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script>
+  // Único guion de la página: el año del pie, para que no envejezca solo.
+  document.getElementById('anio').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
